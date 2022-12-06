@@ -1,0 +1,12 @@
+[Service]
+ExecStart=/root/sync.sh
+Restart=always
+RestartSec=1
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=s3_backup
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target
